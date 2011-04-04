@@ -1,3 +1,5 @@
+* more simply
+
 # Motivation
 
 We are currently migrating our projects from [django](http://www.djangoproject.com) to [flask](http://flask.pocoo.org).
