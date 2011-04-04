@@ -17,5 +17,3 @@ if __name__ == '__main__':
 
     print from_dir, ' to ', to_dir
     shutil.copytree(from_dir, to_dir)
-    os.chdir(to_dir)
-    os.system('git remote rm origin')
