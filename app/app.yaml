@@ -23,4 +23,4 @@ handlers:
   static_dir: static
 
 - url: /.*
-  script: boot.py
+  script: main.py
