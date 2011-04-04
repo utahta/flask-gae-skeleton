@@ -30,8 +30,6 @@ here is a list of assembled components
 * Flask
 * Jinja
 * werkzeug
-* gaeUtils from deck [http://github.com/deck/gae-utils](http://github.com/deck/gae-utils)
-* gaePath [http://github.com/nikgraf/gae-path](http://github.com/nikgraf/gae-path)
 
 # Dependencies
 
@@ -51,15 +49,16 @@ here is a list of assembled components
 
 clone repository
 
-    git clone https://github.com/deck/flask-gae-skeleton.git <project_name>
-
-change to directory of <project_name>
-
-    cd <project_name>
+    git clone https://github.com/utahta/flask-gae-skeleton.git <project_name>
+    cd flask-gae-skeleton
 
 fetch all the submodules via
 
     git submodule update --init
+
+create a project
+    
+    python copy_skeleton.py -t /path/to/project_name
 
 set your own appengine application id in app.yaml
 
@@ -67,24 +66,9 @@ change the 'secret_key' in settings.py by generating a new one
 
 add replace remote
 
-    git remote rm origin
     git remote add origin <new_remote like git@github.com:your_name/project_name.git>
     git commit -am "initial setup"
     git push origin master
-
-# Update from Skeleton
-
-Add the remote and merge in all changes and removes the old stuff again.
-
-    git remote add skeleton https://github.com/deck/flask-gae-skeleton.git
-    git pull skeleton
-    git checkout -b skeleton remotes/skeleton/master
-    git rebase <your_development_branch like master>
-    git checkout <your_development_branch like master>
-    git merge --no-ff skeleton
-    git branch -D skeleton
-    git remote rm skeleton
-    git submodule update
 
 # Usage
 
