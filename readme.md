@@ -64,8 +64,9 @@ set your own appengine application id in app.yaml
 
 change the 'secret_key' in settings.py by generating a new one
 
-add replace remote
-
+initialize git
+    
+    git init
     git remote add origin <new_remote like git@github.com:your_name/project_name.git>
     git commit -am "initial setup"
     git push origin master
